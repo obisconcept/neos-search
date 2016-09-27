@@ -1,0 +1,31 @@
+'ObisConcept.NeosSearch:IndexedSearch':
+  superTypes:
+    'TYPO3.Neos:Plugin': TRUE
+  ui:
+    label: i18n
+    group: 'search'
+    inlineEditable: true
+    icon: 'icon-puzzle-piece'
+    inspector:
+      groups:
+        search:
+          label: i18n
+  properties:
+    searchResultNode:
+      type: reference
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'search'
+          editorOptions:
+            nodeTypes: ['TYPO3.Neos:Document']
+
+'ObisConcept.NeosSearch:SearchResult':
+  superTypes:
+    'TYPO3.Neos:Plugin': TRUE
+  ui:
+    label: i18n
+    group: 'search'
+    inlineEditable: TRUE
+    icon: 'icon-puzzle-piece'

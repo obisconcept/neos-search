@@ -1,0 +1,11 @@
+privilegeTargets:
+  'TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'ObisConcept.NeosSearch.IndexedSearch':
+      matcher: 'method(ObisConcept\NeosSearch\Controller\IndexedSearchController->.*Action())'
+
+roles:
+  'TYPO3.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'ObisConcept.NeosSearch.IndexedSearch'
+        permission: GRANT

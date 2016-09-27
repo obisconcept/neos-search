@@ -1,0 +1,9 @@
+-
+  name: 'AJAX search with JSON response'
+  uriPattern: 'ajax-neos-search'
+  defaults:
+    '@package': 'ObisConcept.NeosSearch'
+    '@controller': 'IndexedSearch'
+    '@action': 'searchResultAjax'
+    '@format': 'json'
+  httpMethods: ['POST']

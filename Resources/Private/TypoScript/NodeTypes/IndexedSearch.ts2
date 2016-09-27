@@ -1,0 +1,17 @@
+prototype(ObisConcept.NeosSearch:IndexedSearch) < prototype(TYPO3.Neos:Plugin) {
+
+    package = 'ObisConcept.NeosSearch'
+    controller = 'IndexedSearch'
+    action = 'index'
+
+    searchResultIdentifier = ''
+
+}
+
+prototype(ObisConcept.NeosSearch:SearchResult) < prototype(TYPO3.Neos:Plugin) {
+
+    package = 'ObisConcept.NeosSearch'
+    controller = 'IndexedSearch'
+    action = 'searchResult'
+
+}

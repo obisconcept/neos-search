@@ -1,0 +1,11 @@
+-
+  requestFilter: 'isPackage("ObisConcept.NeosSearch") && isController("IndexedSearch") && isAction("searchResultAjax") && isFormat("json")'
+  viewObjectName: 'TYPO3\Flow\Mvc\View\JsonView'
+
+-
+  requestFilter: 'isPackage("ObisConcept.NeosSearch") && isController("IndexedSearch") && isAction("searchResult") && isFormat("html")'
+  viewObjectName: 'TYPO3\Fluid\View\TemplateView'
+
+-
+  requestFilter: 'isPackage("ObisConcept.NeosSearch") && isController("IndexedSearch") && isAction("index") && isFormat("html")'
+  viewObjectName: 'TYPO3\Fluid\View\TemplateView'

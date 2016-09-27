@@ -1,0 +1,20 @@
+TYPO3:
+  Neos:
+    nodeTypes:
+      groups:
+        search:
+          position: 'end'
+          label: i18n
+
+    typoScript:
+      autoInclude:
+        'ObisConcept.NeosSearch': TRUE
+
+    userInterface:
+      translation:
+        autoInclude:
+          'ObisConcept.NeosSearch': ['Main', 'NodeTypes/*']
+
+ObisConcept:
+  NeosSearch:
+    templateRootPath: 'resource://ObisConcept.NeosSearch/Private/Templates/'

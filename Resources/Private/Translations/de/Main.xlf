@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="ObisConcept.NeosSearch" source-language="en" datatype="plaintext" target-language="de">
+		<body>
+			<trans-unit id="indexedSearch.search" xml:space="preserve">
+				<source>Search</source>
+				<target xml:lang="de" state="translated">Suchen</target>
+			</trans-unit>
+			<trans-unit id="indexedSearch.selectNode" xml:space="preserve">
+				<source>Please select a search result page!</source>
+				<target xml:lang="de" state="translated">Bitte wählen Sie eine Suchergebnisseite aus!</target>
+			</trans-unit>
+			<trans-unit id="searchResults.headline" xml:space="preserve">
+				<source>Search results for "{0}"</source>
+				<target xml:lang="de" state="translated">Ergebnisse zu Ihrer Suche "{0}"</target>
+			</trans-unit>
+			<trans-unit id="searchResults.noResults" xml:space="preserve">
+				<source>Your search for "{0}" returned no results.</source>
+				<target xml:lang="de" state="translated">Zu Ihrer Suche "{0}" konnten leider keine Ergebnisse gefunden werden.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
