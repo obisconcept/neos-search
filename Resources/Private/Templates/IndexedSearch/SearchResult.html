@@ -1,18 +1,20 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
-<f:if condition="{searchResults}">
-    <f:then>
-        <h1><f:translate id="searchResults.headline" package="ObisConcept.NeosSearch" arguments="{0: '{searchParameter}'}"/></h1>
-        <div class="search-results">
-            <f:for each="{searchResults}" as="search">
-                <neos:link.node node="{search.documentNode}">{search.documentNode.properties.title}</neos:link.node>
-                <div>{search.findString -> f:format.raw()}</div>
-            </f:for>
-        </div>
-    </f:then>
-    <f:else>
-        <div class="no-search-results">
-            <f:translate id="searchResults.noResults" package="ObisConcept.NeosSearch" arguments="{0: '{searchParameter}'}"/>
-        </div>
-    </f:else>
-</f:if>
+<div class="neos-search results">
+    <f:if condition="{searchResults}">
+        <f:then>
+            <h1><f:translate id="searchResults.headline" package="ObisConcept.NeosSearch" arguments="{0: '{searchParameter}'}"/></h1>
+            <div class="search-results">
+                <f:for each="{searchResults}" as="search">
+                    <neos:link.node node="{search.documentNode}">{search.documentNode.properties.title}</neos:link.node>
+                    <div>{search.findString -> f:format.raw()}</div>
+                </f:for>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="no-search-results">
+                <f:translate id="searchResults.noResults" package="ObisConcept.NeosSearch" arguments="{0: '{searchParameter}'}"/>
+            </div>
+        </f:else>
+    </f:if>
+</div>

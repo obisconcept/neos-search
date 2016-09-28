@@ -12,4 +12,14 @@
       }
     }
   }
+
+  &.results {
+    .search-results {
+      margin-top: 15px;
+
+      a + div {
+        margin-bottom: 15px;
+      }
+    }
+  }
 }

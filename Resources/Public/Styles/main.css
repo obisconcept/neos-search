@@ -4,3 +4,8 @@
     font-size: 22px; }
   .neos-search.ajax .search-results li {
     margin-bottom: 15px; }
+
+.neos-search.results .search-results {
+  margin-top: 15px; }
+  .neos-search.results .search-results a + div {
+    margin-bottom: 15px; }
