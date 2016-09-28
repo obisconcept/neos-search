@@ -1,6 +1,6 @@
 -
   name: 'AJAX search with JSON response'
-  uriPattern: 'ajax-neos-search'
+  uriPattern: 'search/{language}'
   defaults:
     '@package': 'ObisConcept.NeosSearch'
     '@controller': 'IndexedSearch'
