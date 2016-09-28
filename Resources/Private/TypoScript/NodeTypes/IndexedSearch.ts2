@@ -8,6 +8,12 @@ prototype(ObisConcept.NeosSearch:IndexedSearch) < prototype(TYPO3.Neos:Plugin) {
 
 }
 
+prototype(ObisConcept.NeosSearch:AjaxIndexedSearch) < prototype(ObisConcept.NeosSearch:IndexedSearch) {
+
+    action = 'indexAjax'
+
+}
+
 prototype(ObisConcept.NeosSearch:SearchResult) < prototype(TYPO3.Neos:Plugin) {
 
     package = 'ObisConcept.NeosSearch'

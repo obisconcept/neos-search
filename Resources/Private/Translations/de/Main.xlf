@@ -18,6 +18,10 @@
 				<source>Your search for "{0}" returned no results.</source>
 				<target xml:lang="de" state="translated">Zu Ihrer Suche "{0}" konnten leider keine Ergebnisse gefunden werden.</target>
 			</trans-unit>
+			<trans-unit id="nodeTypes.groups.search" xml:space="preserve">
+                <source>Search</source>
+                <target xml:lang="de" state="translated">Suche</target>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

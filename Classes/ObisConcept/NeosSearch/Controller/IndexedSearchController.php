@@ -100,6 +100,28 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
      */
     public function indexAction() {
 
+        $this->prepareSearchBox();
+
+    }
+
+    /**
+     * Ajax Search box
+     *
+     * @return void
+     */
+    public function indexAjaxAction() {
+
+        $this->prepareSearchBox();
+
+    }
+
+    /**
+     * Prepare search box view data
+     *
+     * @return void
+     */
+    protected function prepareSearchBox() {
+
         $searchResultNode = $this->request->getInternalArgument('__searchResultNode');
 
         if (!$searchResultNode) {

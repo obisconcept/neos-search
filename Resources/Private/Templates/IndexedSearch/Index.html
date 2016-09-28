@@ -2,10 +2,13 @@
 
 <f:if condition="{searchResultNode}">
     <f:then>
-        <f:form actionUri="{neos:uri.node(node: searchResultNode)}" method="POST" name="search" class="form-search">
-            <f:form.hidden name="currentNodePath" value="{documentNode.path}" />
-            <f:form.textfield name="searchParameter" />
-            <f:form.submit value="{f:translate(id: 'indexedSearch.search', package: 'ObisConcept.NeosSearch')}" />
+        <f:form actionUri="{neos:uri.node(node: searchResultNode)}" method="POST" name="search" class="neos-search">
+            <div class="input-group">
+                <f:form.textfield name="searchParameter" class="form-control" />
+                <span class="input-group-btn">
+                    <f:form.button type="submit" class="btn btn-default">{f:translate(id: 'indexedSearch.search', package: 'ObisConcept.NeosSearch')}</f:form.button>
+                </span>
+            </div>
         </f:form>
     </f:then>
     <f:else>

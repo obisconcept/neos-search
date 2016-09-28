@@ -4,7 +4,8 @@ TYPO3:
       groups:
         search:
           position: 'end'
-          label: i18n
+          label: 'ObisConcept.NeosSearch:Main:nodeTypes.groups.search'
+          collapsed: false
 
     typoScript:
       autoInclude:
