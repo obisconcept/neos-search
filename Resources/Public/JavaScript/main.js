@@ -76,8 +76,11 @@ function getSearchResults(data, form) {
 
     ajaxSearch.abort();
 
+    var dimension = $(form).closest('.neos-search').attr('data-dimension');
+    var searchAjaxUrl = location.protocol + '//' + location.host + '/search/'  + ( dimension != '' ? dimension + '/' : '' );
+
     ajaxSearch = $.ajax({
-        url: '/ajax-neos-search',
+        url: searchAjaxUrl,
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({searchParameter: searchParameter, currentNodePath: currentPath, submitForm: submitForm}),

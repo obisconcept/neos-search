@@ -1,6 +1,6 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
-<div class="neos-search ajax">
+<div class="neos-search ajax" data-dimension="{documentNode.context.dimensions.language.0}">
     <f:if condition="{searchResultNode}">
         <f:then>
             <f:form actionUri="{neos:uri.node(node: searchResultNode)}" method="POST" name="search">

@@ -195,9 +195,10 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
     /**
      * Search for all properties in node for given term for AJAX requests
      *
+     * @param string $language
      * @return void
      */
-    public function searchResultAjaxAction() {
+    public function searchResultAjaxAction($language) {
 
         $results = array();
         $searchArguments = $this->request->getArguments();
@@ -209,7 +210,7 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
 
             $liveWorkspace = $this->workspaceRepository->findOneByName('live');
             $nodeData = $this->nodeDataRepository->findOneByPath($currentNodePath, $liveWorkspace);
-            $context = $this->contextFactory->create(array('targetDimensions' => array('language' => 'de')));
+            $context = $this->contextFactory->create(array('targetDimensions' => array('language' => $language)));
             $currentNode = $this->nodeFactory->createFromNodeData($nodeData, $context);
 
             if ($searchParameter !== NULL && $searchParameter !== '') {
