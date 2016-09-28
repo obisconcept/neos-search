@@ -165,7 +165,22 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
 
         }
 
-        $searchParameter = $searchArguments['searchParameter'];
+        if ($searchArguments === NULL) {
+
+            $searchArguments = $this->request->getHttpRequest()->getArguments();
+
+        }
+
+        if (isset($searchArguments['searchParameter'])) {
+
+            $searchParameter = $searchArguments['searchParameter'];
+
+        } else {
+
+            $searchParameter = '';
+
+        }
+
         $currentNode = $this->request->getInternalArgument('__documentNode');
 
         if ($searchParameter !== NULL && $searchParameter !== '') {
@@ -186,6 +201,7 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
 
         $results = array();
         $searchArguments = $this->request->getArguments();
+
         if (isset($searchArguments['searchParameter']) && isset($searchArguments['currentNodePath'])) {
 
             $searchParameter = $searchArguments['searchParameter'];

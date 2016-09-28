@@ -1,13 +1,17 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
 
-<f:if condition="{searchResultNode}">
-    <f:then>
-        <f:form actionUri="{neos:uri.node(node: searchResultNode)}" method="POST" name="search" class="neos-search ajax">
-            <f:form.hidden name="currentNodePath" value="{documentNode.path}" />
-            <f:form.textfield name="searchParameter" class="form-control" />
-        </f:form>
-    </f:then>
-    <f:else>
-        <div>{f:translate(id: 'indexedSearch.selectNode', package: 'ObisConcept.NeosSearch')}</div>
-    </f:else>
-</f:if>
+<div class="neos-search ajax">
+    <f:if condition="{searchResultNode}">
+        <f:then>
+            <f:form actionUri="{neos:uri.node(node: searchResultNode)}" method="POST" name="search">
+                <input type="hidden" class="submit-form" name="submitForm" value="0" />
+                <input type="hidden" name="currentNodePath" value="{documentNode.path}" />
+                <input type="text" name="searchParameter" class="form-control search-param" value="" />
+            </f:form>
+            <ul class="search-results list-unstyled"></ul>
+        </f:then>
+        <f:else>
+            <div class="message">{f:translate(id: 'indexedSearch.selectNode', package: 'ObisConcept.NeosSearch')}</div>
+        </f:else>
+    </f:if>
+</div>
