@@ -1,0 +1,6 @@
+.neos-search.ajax .search-results {
+  margin-top: 15px; }
+  .neos-search.ajax .search-results .fa.fa-spinner {
+    font-size: 22px; }
+  .neos-search.ajax .search-results li {
+    margin-bottom: 15px; }

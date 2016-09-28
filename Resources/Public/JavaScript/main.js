@@ -99,7 +99,7 @@ function getSearchResults(data, form) {
 
         });
 
-        $(form).next('.search-results').append('<li><a href="#" class="submit-search" title="Weitere Ergebnisse anzeigen">Weitere Ergebnisse anzeigen</a><div class="text">Über diesen Link kommen Sie zur Ergebnissseite</div></li>');
+        $(form).next('.search-results').append('<li><a href="#" class="submit-search" title="Weitere Ergebnisse anzeigen">Weitere Ergebnisse anzeigen</a></li>');
 
     });
 

@@ -6,7 +6,7 @@
             <f:form actionUri="{neos:uri.node(node: searchResultNode)}" method="POST" name="search">
                 <input type="hidden" class="submit-form" name="submitForm" value="0" />
                 <input type="hidden" name="currentNodePath" value="{documentNode.path}" />
-                <input type="text" name="searchParameter" class="form-control search-param" value="" />
+                <input type="text" name="searchParameter" class="form-control search-param" autocomplete="off" value="" />
             </f:form>
             <ul class="search-results list-unstyled"></ul>
         </f:then>
