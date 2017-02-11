@@ -1,6 +1,6 @@
 {
     "name": "obisconcept/neos-search",
-    "type": "typo3-flow-plugin",
+    "type": "neos-flow-plugin",
     "authors": [
         {
             "name": "obis|CONCEPT GmbH & Co. KG",
@@ -11,19 +11,19 @@
     "support": {
         "email": "dev@obis-concept.de"
     },
-    "description": "A Neos CMS package to add search functionality.",
+    "description": "A Neos CMS package to add search functionality for NEOS 3.0.0.",
     "license": ["MIT"],
     "require": {
-        "typo3/neos": "~2.3.0",
-        "typo3/neos-nodetypes": "~2.3.0"
+        "neos/neos": "~3.0.0",
+        "neos/nodetypes": "~3.0.0",
     },
     "suggest": {
         "obisconcept/neos-bootstrap": "Provides Twitter Bootstrap which classes are used for pagination",
         "obisconcept/neos-jquery": "Add this package, if you don't use obisconcept/neos-bootstrap package or if you don't inluded jQuery by yourself"
     },
     "autoload": {
-        "psr-0": {
-            "ObisConcept\\NeosSearch": "Classes"
+        "psr-4": {
+            "ObisConcept\\NeosSearch\\": "Classes"
         }
     }
 }
