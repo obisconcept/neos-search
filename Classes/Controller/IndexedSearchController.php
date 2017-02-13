@@ -80,6 +80,19 @@ class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController
     }
 
     /**
+     * Initializes the view before invoking an action method
+     *
+     * @param \Neos\Flow\Mvc\View\ViewInterface $view The view to be initialized
+     * @return void
+     */
+
+    protected function initializeView(\Neos\Flow\Mvc\View\ViewInterface $view) {
+        if ($view instanceof \Neos\Fluid\View\TemplateView) {
+            $view->setTemplateRootPath($this->settings['templateRootPath']);
+        }
+    }
+
+    /**
      * Search box
      *
      * @return void
@@ -108,7 +121,8 @@ class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController
      */
     protected function prepareSearchBox() {
 
-        $searchResultNode = $this->request->getInternalArgument('__searchResultNode');
+        $searchResultNode = $this->request->getInternalArgument('__node')->getProperty('searchResultNode');
+
 
         if (!$searchResultNode) {
 
@@ -147,7 +161,7 @@ class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController
         $searchArguments = $this->request->getHttpRequest()->getArgument('--obisconcept_neossearch-indexedsearch');
         if ($searchArguments === NULL) {
 
-            $searchArguments = $this->request->getHttpRequest()->getArgument('--typo3_neos_nodetypes-page');
+            $searchArguments = $this->request->getHttpRequest()->getArgument('--neos_nodetypes-page');
 
         }
 

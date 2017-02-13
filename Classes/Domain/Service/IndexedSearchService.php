@@ -54,9 +54,9 @@ class IndexedSearchService {
                 }
             }
 
-            if ($node !== NULL && (string) $node->getNodeType() !== 'TYPO3.Neos:Document') {
+            if ($node !== NULL && (string) $node->getNodeType() !== 'Neos.Neos:Document') {
                 $flowQuery = new FlowQuery(array($node));
-                $documentNode = $flowQuery->closest('[instanceof TYPO3.Neos:Document]')->get(0);
+                $documentNode = $flowQuery->closest('[instanceof Neos.Neos:Document]')->get(0);
 
                 if ($documentNode) {
                     $findString = $this->prepareFindString($findString, $searchParameter);

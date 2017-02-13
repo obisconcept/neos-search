@@ -21,8 +21,8 @@
         inspector:
           group: settings
           editorOptions:
-            nodeTypes:
-              - 'Neos.Neos:Document'
+            nodeTypes: ['Neos.Neos:Document']
+            
 'ObisConcept.NeosSearch:AjaxIndexedSearch':
   superTypes:
     'ObisConcept.NeosSearch:IndexedSearch': true
