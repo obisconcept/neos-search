@@ -1,9 +1,10 @@
+
 'ObisConcept.NeosSearch:IndexedSearch':
   superTypes:
-    'TYPO3.Neos:Plugin': TRUE
+    'Neos.Neos:Plugin': true
   ui:
     label: i18n
-    group: 'search'
+    group: search
     inlineEditable: true
     icon: 'fa fa-search'
     inspector:
@@ -16,23 +17,22 @@
       type: reference
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'settings'
+          group: settings
           editorOptions:
-            nodeTypes: ['TYPO3.Neos:Document']
-
+            nodeTypes:
+              - 'Neos.Neos:Document'
 'ObisConcept.NeosSearch:AjaxIndexedSearch':
   superTypes:
-    'ObisConcept.NeosSearch:IndexedSearch': TRUE
+    'ObisConcept.NeosSearch:IndexedSearch': true
   ui:
     label: i18n
-
 'ObisConcept.NeosSearch:SearchResult':
   superTypes:
-    'TYPO3.Neos:Plugin': TRUE
+    'Neos.Neos:Plugin': true
   ui:
     label: i18n
-    group: 'search'
-    inlineEditable: TRUE
+    group: search
+    inlineEditable: true
     icon: 'fa fa-list'

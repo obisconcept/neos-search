@@ -1,21 +1,21 @@
-TYPO3:
-  Neos:
-    nodeTypes:
-      groups:
-        search:
-          position: 'end'
-          label: 'ObisConcept.NeosSearch:Main:nodeTypes.groups.search'
-          collapsed: false
-
-    typoScript:
-      autoInclude:
-        'ObisConcept.NeosSearch': TRUE
-
-    userInterface:
-      translation:
-        autoInclude:
-          'ObisConcept.NeosSearch': ['Main', 'NodeTypes/*']
 
 ObisConcept:
   NeosSearch:
     templateRootPath: 'resource://ObisConcept.NeosSearch/Private/Templates/'
+Neos:
+  Neos:
+    nodeTypes:
+      groups:
+        search:
+          position: end
+          label: 'ObisConcept.NeosSearch:Main:nodeTypes.groups.search'
+          collapsed: false
+    userInterface:
+      translation:
+        autoInclude:
+          ObisConcept.NeosSearch:
+            - Main
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        ObisConcept.NeosSearch: true

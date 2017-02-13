@@ -1,4 +1,4 @@
-prototype(ObisConcept.NeosSearch:IndexedSearch) < prototype(TYPO3.Neos:Plugin) {
+prototype(ObisConcept.NeosSearch:IndexedSearch) < prototype(Neos.Neos:Plugin) {
 
     package = 'ObisConcept.NeosSearch'
     controller = 'IndexedSearch'
@@ -14,7 +14,7 @@ prototype(ObisConcept.NeosSearch:AjaxIndexedSearch) < prototype(ObisConcept.Neos
 
 }
 
-prototype(ObisConcept.NeosSearch:SearchResult) < prototype(TYPO3.Neos:Plugin) {
+prototype(ObisConcept.NeosSearch:SearchResult) < prototype(Neos.Neos:Plugin) {
 
     package = 'ObisConcept.NeosSearch'
     controller = 'IndexedSearch'

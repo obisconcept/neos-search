@@ -1,25 +1,25 @@
-prototype(TYPO3.Neos:Page) {
+prototype(Neos.Neos:Page) {
 
     head {
 
-        searchCss = TYPO3.TypoScript:Tag {
+        searchCss = Neos.Fusion:Tag {
             @position = 'before stylesheets'
             tagName = 'link'
             attributes {
                 media = 'all'
                 rel = 'stylesheet'
-                href = TYPO3.TypoScript:ResourceUri {
+                href = Neos.Fusion:ResourceUri {
                     path = 'resource://ObisConcept.NeosSearch/Public/Styles/main.min.css'
                 }
             }
         }
 
-        searchJs = TYPO3.TypoScript:Tag {
+        searchJs = Neos.Fusion:Tag {
             @position = 'before javascripts'
             tagName = 'script'
             attributes {
                 type = 'text/javascript'
-                src = TYPO3.TypoScript:ResourceUri {
+                src = Neos.Fusion:ResourceUri {
                     path = 'resource://ObisConcept.NeosSearch/Public/JavaScript/main.min.js'
                 }
             }

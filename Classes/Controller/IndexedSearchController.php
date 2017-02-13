@@ -2,8 +2,8 @@
 
 namespace ObisConcept\NeosSearch\Controller;
 
-use TYPO3\Flow\Annotations as Flow;
-use TYPO3\Neos\Service\LinkingService;
+use Neos\Flow\Annotations as Flow;
+use Neos\Neos\Service\LinkingService;
 
 /**
  * Class IndexedSearchController
@@ -11,7 +11,7 @@ use TYPO3\Neos\Service\LinkingService;
  * @package ObisConcept\NeosSearchPlugin
  * @subpackage Controller
  */
-class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionController {
+class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController {
 
     /**
      * Linking service
@@ -25,7 +25,7 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
      * Workspace repository
      *
      * @Flow\Inject
-     * @var \TYPO3\TYPO3CR\Domain\Repository\WorkspaceRepository
+     * @var \Neos\ContentRepository\Domain\Repository\WorkspaceRepository
      */
     protected $workspaceRepository;
 
@@ -33,7 +33,7 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
      * NodeData repository
      *
      * @Flow\Inject
-     * @var \TYPO3\TYPO3CR\Domain\Repository\NodeDataRepository
+     * @var \Neos\ContentRepository\Domain\Repository\NodeDataRepository
      */
     protected $nodeDataRepository;
 
@@ -41,7 +41,7 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
      * Node factory
      *
      * @Flow\Inject
-     * @var \TYPO3\TYPO3CR\Domain\Factory\NodeFactory
+     * @var \Neos\ContentRepository\Domain\Factory\NodeFactory
      */
     protected $nodeFactory;
 
@@ -49,7 +49,7 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
      * Context factory
      *
      * @Flow\Inject
-     * @var \TYPO3\Neos\Domain\Service\ContentContextFactory
+     * @var \Neos\Neos\Domain\Service\ContentContextFactory
      */
     protected $contextFactory;
 
@@ -76,20 +76,6 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
     public function injectSettings(array $settings) {
 
         $this->settings = $settings;
-
-    }
-
-    /**
-     * Initializes the view before invoking an action method
-     *
-     * @param \TYPO3\Flow\Mvc\View\ViewInterface $view The view to be initialized
-     * @return void
-     */
-    protected function initializeView(\TYPO3\Flow\Mvc\View\ViewInterface $view) {
-
-        if ($view instanceof \TYPO3\Fluid\View\TemplateView) {
-            $view->setTemplateRootPath($this->settings['templateRootPath']);
-        }
 
     }
 
@@ -130,8 +116,8 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
             if ($searchResultIdentifier != '') {
 
                 $siteNode = $this->request->getInternalArgument('__documentNode')->getContext()->getCurrentSiteNode();
-                $flowQuery = new \TYPO3\Eel\FlowQuery\FlowQuery(array($siteNode));
-                $operation = new \TYPO3\TYPO3CR\Eel\FlowQueryOperations\FindOperation();
+                $flowQuery = new \Neos\Eel\FlowQuery\FlowQuery(array($siteNode));
+                $operation = new \Neos\ContentRepository\Eel\FlowQueryOperations\FindOperation();
                 $operation->evaluate($flowQuery, array('#'.$searchResultIdentifier));
                 $searchResultNode = (isset($flowQuery->getContext()[0]) && $flowQuery->getContext()[0] != NULL) ? $flowQuery->getContext()[0] : NULL;
 
