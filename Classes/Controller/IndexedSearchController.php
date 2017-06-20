@@ -210,7 +210,7 @@ class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController
 
             $liveWorkspace = $this->workspaceRepository->findOneByName('live');
             $nodeData = $this->nodeDataRepository->findOneByPath($currentNodePath, $liveWorkspace);
-            $context = $this->contextFactory->create(array('targetDimensions' => array('language' => $language)));
+            $context = $this->contextFactory->create(array('dimensions' => array('language' => array($language))));
             $currentNode = $this->nodeFactory->createFromNodeData($nodeData, $context);
 
             if ($searchParameter !== NULL && $searchParameter !== '') {
