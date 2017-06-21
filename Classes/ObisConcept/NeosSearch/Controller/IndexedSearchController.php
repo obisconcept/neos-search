@@ -159,11 +159,6 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
     public function searchResultAction() {
 
         $searchArguments = $this->request->getHttpRequest()->getArgument('--obisconcept_neossearch-indexedsearch');
-        if ($searchArguments === NULL) {
-
-            $searchArguments = $this->request->getHttpRequest()->getArgument('--typo3_neos_nodetypes-page');
-
-        }
 
         if ($searchArguments === NULL) {
 
