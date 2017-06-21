@@ -159,11 +159,6 @@ class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController
     public function searchResultAction() {
 
         $searchArguments = $this->request->getHttpRequest()->getArgument('--obisconcept_neossearch-indexedsearch');
-        if ($searchArguments === NULL) {
-
-            $searchArguments = $this->request->getHttpRequest()->getArgument('--neos_nodetypes-page');
-
-        }
 
         if ($searchArguments === NULL) {
 
