@@ -172,7 +172,21 @@ class IndexedSearchController extends \Neos\Flow\Mvc\Controller\ActionController
 
         } else {
 
-            $searchParameter = '';
+            foreach ($searchArguments as $key) {
+
+                if (isset($key['searchParameter'])) {
+
+                  $searchParameter = $key['searchParameter'];
+
+                }
+
+           }
+
+           if (!isset($searchParameter)) {
+
+              $searchParameter = '';
+
+           }
 
         }
 
