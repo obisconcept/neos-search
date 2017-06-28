@@ -172,7 +172,21 @@ class IndexedSearchController extends \TYPO3\Flow\Mvc\Controller\ActionControlle
 
         } else {
 
-            $searchParameter = '';
+            foreach ($searchArguments as $key) {
+
+                if (isset($key['searchParameter'])) {
+
+                  $searchParameter = $key['searchParameter'];
+
+                }
+
+           }
+
+           if (!isset($searchParameter)) {
+
+              $searchParameter = '';
+
+           }
 
         }
 
