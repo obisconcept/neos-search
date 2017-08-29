@@ -12,6 +12,7 @@ prototype(Neos.Neos:Page) {
                     path = 'resource://ObisConcept.NeosSearch/Public/Styles/main.min.css'
                 }
             }
+            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
         }
 
         searchJs = Neos.Fusion:Tag {
@@ -23,6 +24,7 @@ prototype(Neos.Neos:Page) {
                     path = 'resource://ObisConcept.NeosSearch/Public/JavaScript/main.min.js'
                 }
             }
+            @if.includeFrontendAssets = ${Configuration.setting('ObisConcept.includeFrontendAssets')}
         }
 
     }

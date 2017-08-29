@@ -1,5 +1,5 @@
-
 ObisConcept:
+  includeFrontendAssets: true
   NeosSearch:
     templateRootPath: 'resource://ObisConcept.NeosSearch/Private/Templates/'
 Neos:
